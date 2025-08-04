@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Feliz Niver 15 da Juju ❤️ - Site de Aniversário Especial</title>
     <meta name="description" content="Site especial de aniversário para Júlia, 15 anos. Presente romântico e personalizado com fotos, música e mensagens de amor.">
     <meta name="keywords" content="niver 15 da juju, aniversário júlia, feliz aniversário 15 anos, site romântico, presente especial, júlia 15 anos, aniversário personalizado, amor romântico">
@@ -28,44 +28,46 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #1c1cff 50%, #000000 100%);
+            background: linear-gradient(135deg, #000000 0%, #09099c 50%, #000000 100%);
             color: white;
             line-height: 1.6;
             scroll-behavior: smooth;
             overflow-x: hidden;
+            min-height: 100vh;
         }
 
         .container {
             max-width: 100%;
-            padding: 20px;
+            padding: 10px;
             margin: 0 auto;
         }
 
         .header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 20px 15px;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            border-radius: 20px;
-            margin-bottom: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
         .header h1 {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             animation: pulse 2s infinite;
+            word-wrap: break-word;
         }
 
         .header img {
-            width: 90%;
-            max-width: 400px;
+            width: 100%;
+            max-width: 300px;
             height: auto;
             aspect-ratio: 2/3;
             border-radius: 15px;
             object-fit: cover;
-            margin: 25px auto;
+            margin: 20px auto;
             display: block;
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
             border: 4px solid rgba(255, 255, 255, 0.4);
@@ -84,15 +86,15 @@
         .content-section {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 30px;
-            margin-bottom: 30px;
+            gap: 20px;
+            margin-bottom: 20px;
         }
 
         .photo-text-block {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            padding: 20px;
+            gap: 15px;
+            padding: 15px;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 15px;
@@ -106,7 +108,8 @@
 
         .photo-container {
             width: 100%;
-            height: 500px;
+            height: auto;
+            min-height: 250px;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             display: flex;
@@ -114,34 +117,36 @@
             justify-content: center;
             border: 2px dashed rgba(255, 255, 255, 0.3);
             aspect-ratio: 3/4;
+            overflow: hidden;
         }
 
         .photo-placeholder {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: rgba(255, 255, 255, 0.7);
         }
 
         .text-content {
-            padding: 15px;
+            padding: 10px;
         }
 
         .text-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
             color: #ffd700;
         }
 
         .text-content p {
-            font-size: 1rem;
-            line-height: 1.8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            text-align: justify;
         }
 
         .music-controls {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 15px;
+            right: 15px;
             background: rgba(0, 0, 0, 0.8);
-            padding: 15px;
+            padding: 12px;
             border-radius: 50px;
             backdrop-filter: blur(10px);
             z-index: 1000;
@@ -151,11 +156,12 @@
             background: #ff6b6b;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 8px 16px;
             border-radius: 25px;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: all 0.3s ease;
+            white-space: nowrap;
         }
 
         .music-btn:hover {
@@ -186,7 +192,7 @@
         .floating-heart {
             position: absolute;
             color: #ff6b6b;
-            font-size: 20px;
+            font-size: 16px;
             animation: float 6s linear infinite;
             opacity: 0.6;
         }
@@ -210,9 +216,9 @@
 
         .music-arrow {
             position: fixed;
-            bottom: 99px;
-            right: 80px;
-            font-size: 50px;
+            bottom: 80px;
+            right: 60px;
+            font-size: 40px;
             color: #ffd700;
             animation: arrowPulse 1.5s ease-in-out infinite;
             z-index: 999;
@@ -238,47 +244,78 @@
         }
 
         @media (min-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header {
+                padding: 40px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
             .content-section {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
             }
             
             .photo-text-block {
                 flex-direction: row;
+                gap: 20px;
+                padding: 20px;
             }
             
             .photo-container {
                 width: 200px;
-                height: 267px;
+                height: auto;
+                min-height: 267px;
                 flex-shrink: 0;
                 aspect-ratio: 3/4;
+            }
+            
+            .text-content h3 {
+                font-size: 1.3rem;
+            }
+            
+            .text-content p {
+                font-size: 1rem;
             }
         }
 
         .special-message {
             text-align: center;
-            padding: 40px 20px;
+            padding: 30px 15px;
             background: linear-gradient(45deg, #ff6b6b, #ffd93d);
-            border-radius: 20px;
-            margin: 30px 0;
+            border-radius: 15px;
+            margin: 20px 0;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         }
 
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            animation: pulse 2s infinite;
-        }
-
         .special-message h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
             color: white;
         }
 
         .special-message p {
-            font-size: 1.2rem;
-            line-height: 1.8;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        @media (min-width: 768px) {
+            .special-message {
+                padding: 40px 20px;
+            }
+            
+            .special-message h2 {
+                font-size: 2rem;
+            }
+            
+            .special-message p {
+                font-size: 1.2rem;
+            }
         }
 
         /* Efeitos de rolagem */
@@ -329,11 +366,11 @@
         /* Footer */
         .footer {
             text-align: center;
-            padding: 40px 20px;
+            padding: 30px 15px;
             background: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(10px);
-            border-radius: 20px;
-            margin-top: 40px;
+            border-radius: 15px;
+            margin-top: 30px;
             border-top: 2px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -343,14 +380,14 @@
         }
 
         .footer h3 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 15px;
             color: #ffd700;
             text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
         }
 
         .footer p {
-            font-size: 1rem;
+            font-size: 0.9rem;
             margin-bottom: 10px;
             opacity: 0.9;
         }
@@ -381,11 +418,11 @@
 
         /* Estilos para a lista de redes sociais */
         .social-links {
-            margin-top: 25px;
+            margin-top: 20px;
         }
 
         .social-links h4 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 15px;
             color: #ffd700;
             text-align: center;
@@ -401,8 +438,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 12px;
-            padding: 10px 15px;
+            margin-bottom: 10px;
+            padding: 8px 12px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             transition: all 0.3s ease;
@@ -416,8 +453,8 @@
         }
 
         .social-icon {
-            font-size: 1.5rem;
-            margin-right: 12px;
+            font-size: 1.3rem;
+            margin-right: 10px;
             display: inline-block;
             animation: iconPulse 2s ease-in-out infinite;
         }
@@ -431,7 +468,7 @@
             color: #0066cc;
             text-decoration: underline;
             font-weight: 500;
-            font-size: 1rem;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
         }
 
@@ -441,10 +478,46 @@
         }
 
         .made-with-love {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             opacity: 0.7;
-            margin-top: 20px;
+            margin-top: 15px;
             font-style: italic;
+        }
+
+        @media (min-width: 768px) {
+            .footer {
+                padding: 40px 20px;
+            }
+            
+            .footer h3 {
+                font-size: 1.5rem;
+            }
+            
+            .footer p {
+                font-size: 1rem;
+            }
+            
+            .social-links h4 {
+                font-size: 1.2rem;
+            }
+            
+            .social-list li {
+                padding: 10px 15px;
+            }
+            
+            .social-icon {
+                font-size: 1.5rem;
+                margin-right: 12px;
+            }
+            
+            .social-link {
+                font-size: 1rem;
+            }
+            
+            .made-with-love {
+                font-size: 0.9rem;
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
@@ -463,7 +536,7 @@
         <div class="content-section">
             <div class="photo-text-block fade-in">
                 <div class="photo-container">
-                    <img src="edit_primeira-ft.jpg" alt="Nossa primeira foto (Edit)" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    <img src="edit_primeira-ft.jpg" alt="Nossa primeira foto (Edit)" style="width: 100%; height: auto; object-fit: contain; border-radius: 10px;">
                 </div>
                 <div class="text-content">
                     <h3>💝 Nossa História</h3>
@@ -487,13 +560,13 @@
                     </p>
                 </div>
                 <div class="photo-container">
-                    <img src="love_you.jpg" alt="Foto nossa em seu aniversário" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    <img src="love_you.jpg" alt="Foto nossa em seu aniversário" style="width: 100%; height: auto; object-fit: contain; border-radius: 10px;">
                 </div>
             </div>
 
             <div class="photo-text-block fade-in">
                 <div class="photo-container">
-                    <img src="i_love_you.jpg" alt="I love you" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    <img src="i_love_you.jpg" alt="I love you" style="width: 100%; height: auto; object-fit: contain; border-radius: 10px;">
                 </div>
                 <div class="text-content">
                     <h3>💕 Por que te amo</h3>
@@ -515,7 +588,7 @@
                     </p>
                 </div>
                 <div class="photo-container">
-                    <img src="so-nois_dois.jpg" alt="Nós dois" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    <img src="so-nois_dois.jpg" alt="Nós dois" style="width: 100%; height: auto; object-fit: contain; border-radius: 10px;">
                 </div>
             </div>
         </div>
